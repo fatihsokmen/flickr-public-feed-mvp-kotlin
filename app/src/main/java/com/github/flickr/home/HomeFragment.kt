@@ -65,7 +65,7 @@ class HomeFragment : Fragment(), HomeFragmentContract.View {
     override fun showError(message: String) {
         view?.let { view ->
             val snackBar = Snackbar.make(view, message, Snackbar.LENGTH_LONG)
-            snackBar.view.background = ContextCompat.getDrawable(context!!, R.color.colorAccent)
+            snackBar.view.background = ContextCompat.getDrawable(view.context, R.color.colorAccent)
             snackBar.show()
         }
     }
